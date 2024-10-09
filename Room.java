@@ -41,7 +41,6 @@ public class Room {
         return foundItem;
     }
 
-
     public Item removeItem(String itemName) {
         Item item = findItemPartialName(itemName);
         if (item != null) {
@@ -68,7 +67,6 @@ public class Room {
             return iventoryString.toString();
         }
     }
-
 
 
     //Setters*****

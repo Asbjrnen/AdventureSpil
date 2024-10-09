@@ -43,21 +43,17 @@ public class DungeonMap {
         room1.setSouth(room4);
 
 
-
         //Items der ligger i de forskellige rum
-        room1.addItem(new Item("Sword","A blade with a Rusty handle from the blood seeping into it, seems good, but the durability can't be high."));
-        room1.addItem(new Item("Big Axe","This clearly belonged to a giant or so it would seem, the handle has broken in half, making it so you can actually swing it"));
-        room1.addItem(new Item("Poor bow","A desperate attempt at a long ranged weapon, it will not win you competetions, but it will give you a better chance of survival down here"));
-        room2.addItem(new Item("Buckler","A flat piece of iron in poor condition, it will be at least useful for defence against either long range or melee attacks"));
-        room2.addItem(new Item("Throwing Knives","In a leather pouch there are small knives tucked away, albeit small, they seem deadly sharp."));
+        room1.addItem(new Item("Sword", "A blade with a Rusty handle from the blood seeping into it, seems good, but the durability can't be high."));
+        room1.addItem(new Item("Big Axe", "This clearly belonged to a giant or so it would seem, the handle has broken in half, making it so you can actually swing it"));
+        room1.addItem(new Item("Poor bow", "A desperate attempt at a long ranged weapon, it will not win you competetions, but it will give you a better chance of survival down here"));
+        room2.addItem(new Item("Buckler", "A flat piece of iron in poor condition, it will be at least useful for defence against either long range or melee attacks"));
+        room2.addItem(new Item("Throwing Knives", "In a leather pouch there are small knives tucked away, albeit small, they seem deadly sharp."));
 
         //Food i de forskellige rum
         room2.addItem(new Food("Citrus", "A yellow green fruit, reminding you of lemonade, might make a good refreshment if you drink it", +10));
         room3.addItem(new Food("Rat", "Looking at it, it is a dead rat, god knows how long it as been here, but it is survival of the fittest", +20));
-        room1.addItem(new Food("Pork Chop" , "This seemingly dropped from your torn backpack when you landed down here in the first place, might come in handy later!", +50));
-
-
-
+        room1.addItem(new Food("Pork Chop", "This seemingly dropped from your torn backpack when you landed down here in the first place, might come in handy later!", +50));
 
 
         return room1;

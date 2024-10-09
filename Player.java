@@ -6,7 +6,7 @@ import java.util.List;
 public class Player {
     private String name;
     private int health;
-    private int maxHP
+    private int maxHP;
     private List<Item> inventory;
     private Room currentRoom;
 
@@ -15,26 +15,25 @@ public class Player {
         this.maxHP = 100;
         this.health = maxHP;
         inventory = new ArrayList<>();
-//        this.attackPower = 10;
-//        this.defense = 3;
+
     }
-    public int getHealth(){
+
+    public int getHealth() {
         return health;
     }
 
-    public void diffHealth(int amount){
+    public void diffHealth(int amount) {
         this.health += amount;
-        if(this.health > maxHP){
+        if (this.health > maxHP) {
             this.health = maxHP;
         }
-        if(this.health < 0){
+        if (this.health < 0) {
             this.health = 0;
         }
     }
 
-    public double getHealthPercentage()
-    {
-        return ((double) health / maxHealth) * 100;
+    public double getHealthPercentage() {
+        return ((double) health / maxHP) * 100;
     }
 
     public String getName() {

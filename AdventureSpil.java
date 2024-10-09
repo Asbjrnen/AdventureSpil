@@ -55,8 +55,8 @@ public class AdventureSpil {
             case "take":
                 if (input.startsWith("take ")) {
                     String itemName = input.substring(5);
-
                     Item item = initialRoom.findItemPartialName(itemName);
+
                     if (item == null) {
                         ui.displayMessage(String.format("Item %s not found", itemName));
                     } else player.addItem(item);
@@ -64,7 +64,6 @@ public class AdventureSpil {
                     ui.displayMessage(String.format("Item %s has been taken", itemName));
                 }
                 break;
-
 
             case "Drop":
                 if (input.startsWith("Drop ")) {
@@ -84,19 +83,16 @@ public class AdventureSpil {
                 double healthPercentage = player.getHealthPercentage();
                 String healthDesc;
 
-                if(healthPercentage > 75) {
+                if (healthPercentage > 75) {
                     healthDesc = "Your body is aching a little but you're still fit for a fight";
-                }
-                else if(healthPercentage > 50) {
+                } else if (healthPercentage > 50) {
                     healthDesc = "Your vitals are still good, but you might want to be a little more careful when you fight";
-                }
-                else if (healthPercentage > 25) {
+                } else if (healthPercentage > 25) {
                     healthDesc = "You feel tired and you're hurting all over and you suspect you might have broken something, you're eager for a boost to your vitals";
-                }
-                else {
+                } else {
                     healthDesc = "Your body is in serious danger, if you do not find immediate shelter or help you might bleed out to death!";
                 }
-                ui.displayMessage("Health: " + player.getHealthPercentage() + " (" + healthDesc + "%) " + "\n" + healthDesc);
+                ui.displayMessage("Health: " + player.getHealthPercentage() + " (" + healthPercentage + "%) " + "\n" + healthDesc);
                 break;
 
             case "eat":
@@ -111,15 +107,13 @@ public class AdventureSpil {
                     }
                     if (!(item instanceof Food)) {
                         ui.displayMessage(String.format("Item %s is not a food", foodName));
-                    }
-                    else{
+                    } else {
                         Food food = (Food) item;
                         int healthIncrease = food.getHealthpoints();
                         player.diffHealth(healthIncrease);
                         if (healthIncrease > 0) {
                             ui.displayMessage(String.format("You have been eaten %d", healthIncrease));
-                        }
-                        else {
+                        } else {
                             ui.displayMessage(String.format("You have been eaten %d", Math.abs(healthIncrease)));
                         }
                     }
