@@ -1,6 +1,6 @@
 package AdventureSpil;
 
-public class Rooms
+public class Room
 {
     private String name;
     private String description;
@@ -10,7 +10,7 @@ public class Rooms
     private Room south;
 
     //Constructor
-    public Rooms(String name, String description)
+    public Room(String name, String description)
     {
         this.name = name;
         this.description = description;
@@ -19,22 +19,22 @@ public class Rooms
     //Setters*****
     public void setNorth(Room north)
     {
-        this.North = north;
+        this.north = north;
     }
 
     public void setWest(Room west)
     {
-        this.West = west;
+        this.west = west;
     }
 
     public void setEast(Room east)
     {
-        this.East = east;
+        this.east = east;
     }
 
     public void setSouth (Room south)
     {
-        this.South = south;
+        this.south = south;
     }
 
     //Getters**********
