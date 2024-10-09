@@ -3,38 +3,26 @@ package AdventureSpil;
 import java.util.Scanner;
 
 
-public class UserInterface
-{
+public class UserInterface {
     private Scanner scanner;
 
-    public UserInterface(){
+    public UserInterface() {
         scanner = new Scanner(System.in);
     }
 
-    public void displayMessage(String message){
+    public void displayMessage(String message) {
         System.out.println(message);
     }
 
-    public String getInput(String prompt){
+    public String getInput(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine().toLowerCase();
     }
 
-    public void close(){
+    public void close() {
         scanner.close();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 //    //METHODS***** (Vil fortælle brugeren hvilket rum de er i og hvad udseendet er rummet er og hvad de kan se/interagere med)
